@@ -1,0 +1,206 @@
+\begin{equation}\label{eq:1.6}
+    \begin{gathered}
+        \sum_{i=1}^n v_i\frac{\partial v}{\partial x_j}-\nu\Delta v- 2\varkappa Div\bigg(v_k\frac{\partial\mathcal{E}(v)}
+        {\partial x_k}\bigg)-\\-2\varkappa Div\bigg(\mathcal{E}(v)W_p(v)-W_p(v)\mathcal{E}(v)\bigg)+grad p=f, x\in\Omega
+    \end{gathered}
+\end{equation}
+
+\begin{equation}\label{eq:1.7}
+    \begin{gathered}
+        div \ v=0, x\in\Omega
+    \end{gathered}
+\end{equation}
+
+Для системы (\ref{eq:1.6})"=(\ref{eq:1.7}) рассмотрим краетвую задачу с граничным условием
+\begin{equation}\label{eq:1.8}
+     \begin{gathered}
+         v\mid_{\partial\Omega}=0.
+     \end{gathered}
+\end{equation}
+
+В настоящей работе исследуется существование слабого решения краевой задачи (\ref{eq:1.6})"=(\ref{eq:1.8}), описывающего движение слабых
+водных растворов полимеров, заполняющих ограниченную область $\Omega \in R^n$, $n = 2,3$, которое определяется реологическим
+соотношением  со сглаженной производной Яуманна.
+
+Для исследования используются аппроксимационные и топологические методы
+(см., например, [9], [10]). Краевая задача рассматривается как операторное уравнение. Используемые операторы часто не
+обладают хорошими свойствами  , поэтому рассматривается некоторая аппроксимация этого уравнения. Затем разрешимость
+этого аппроксимирующего уравнения исследуется в более сглаженном пространстве. Для этого применяется техника
+топологической степени Лере-Шаудера. Последний шаг - предельный переход  в аппроксимирующем уравнении, поскольку
+аппроксимирующие параметры стремятся к нулю, а решения аппроксимирующего уравнения сходятся к решению исходного
+уравнения.
+
+
+\section{Слабое условие}
+
+Обозначим через $C_0^{\infty}(\Omega)^n$ пространство функций класса $C^{\infty}$, отображаемых $\Omega$ в $R^n$ с
+компактным носителем в $\Omega$. Также нам потребуется определение следующих функциональных пространств
+$$\mathcal{V}={v(x)=(v_1,...,v_n)\in C_0^{\infty}(\Omega)^n: div \ v = 0};$$
+$V$ - замыкание на $\mathcal{V}$ по норме пространсва $W^1_2(\Omega)^n$
+со скалырным произведением
+$$((v,w))=\int\limits_{\Omega}\nabla v : \nabla w dx.$$
+Здесь символ $\nabla v : \nabla w, v=(v_1,...,v_n), w=(w_1,...,w_n)$, обозначает покомпактное метрическое умножение
+$$\nabla v : \nabla w = \sum_{i,j=1}^n \frac{\partial v_i}{\partial x_j}\frac{\partial w_i}{\partial x_j} $$
+Пусть $X$ - замыкание $V$ относительно нормы пространства $W_2^3(\Omega)^n$. Рассмотрим пространство $X$ с нормой:
+$$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta v)dx\bigg)^{1/2}$$
+
+\begin{definition}
+    Пусть $f$ принадлежит $V^*$. Слабым решением краевой задачи (\ref{eq:1.6})"=(\ref{eq:1.8}) называется функция $v\in V$ такая,
+    что для любого $y\in X$ она удовлетворяет равенству
+    \begin{equation}\label{eq:2.1}
+        \begin{gathered}
+            \nu\int\limits_{\Omega}\nabla v: \nabla w dx-\int\limits_{\Omega} \sum_{i,j=1}^n v_iv_j\frac{\partial \varphi_j}
+            {\partial x_i}dx-\varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial v_i}{\partial x_j}\frac{\partial^2 \varphi_i}{\partial x_j\partial x_k}dx- \\
+            \varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial v_i}{\partial x_j}\frac{\partial^2 \varphi_i}
+            {\partial x_j\partial x_k}dx+ 2\varkappa\int\limits_{\Omega}(\mathcal{E}(v)W_p(v)-W_p(v)\mathcal{E}(v)):
+            \nabla\varphi dx=\langle f,\varphi \rangle
+        \end{gathered}
+    \end{equation}
+\end{definition}
+Основным результатом статьи является следующая теорема.
+
+\begin{theorem}
+    Для любой $f\in V^*$ краевая задача (\ref{eq:1.6})"=(\ref{eq:1.8}) имеет хотя бы одно слабое решение $v_*\in V$
+\end{theorem}
+
+\section{Аппроксимационная задача}
+При исследовании задачи (\ref{eq:1.6})"=(\ref{eq:1.8}) мы используем аппроксимационно"=топологический подход к задачам гидродинамики [10].
+Фактически мы исследуем аппроксимирующую задачу с малым параметром $\varepsilon > 0$:
+
+Аппроксимационная задача.
+
+Найти функцию $v \in X$, которая для любого $\varphi \in X$ удовлетворяет следующему равенству
+\begin{equation*}
+    \begin{gathered}
+        \varepsilon \int\limits_\Omega \nabla(\Delta v): \ \nabla(\Delta\varphi) \ dx -
+        \int\limits_\Omega \sum_{i,j=1}^n v_i v_j \frac{\partial \varphi_j}{\partial x_i} dx \ \nu
+        \int\limits_\Omega \nabla v: \ \nabla \varphi \ dx
+    \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+    \begin{gathered}
+        - \varkappa \int\limits_\Omega \sum_{i,j,k=1}^n v_k \frac{\partial v_i}{\partial x_j}
+        \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} \ dx
+        - \varkappa \int\limits_\Omega \sum_{i,j,k=1}^n v_k \frac{\partial v_j}{\partial x_i}
+        \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} \ dx
+    \end{gathered}
+\end{equation*}
+
+\begin{equation}\label{eq:3.1}
+    \begin{gathered}
+        + 2 \varkappa \int\limits_\Omega (\mathcal{E}(v) W_\rho (v) - W_\rho (v) \mathcal{E}(v)): \ \nabla \varphi
+        = \langle f, \varphi \rangle.
+    \end{gathered}
+\end{equation}
+
+Отметим, что (\ref{eq:3.1}) отличается от (\ref{eq:2.1}) наличием члена
+\begin{equation*}
+    \begin{gathered}
+        \varepsilon \int\limits_\Omega \nabla(\Delta v): \ \nabla(\Delta\varphi) \ dx.
+    \end{gathered}
+\end{equation*}
+
+На первом шаге мы получаем априорную оценку равенства (\ref{eq:3.1}) в пространстве $X$
+и с помощью методов топологической степени показываем, что существует решение аппроксимирующей задачи в $X$.
+Также получаем в пространстве $V$ оценку решения аппроксимирующей задачи, которая не зависит от параметра $\varepsilon$.
+Затем простроим последовательность таких решений и покажем, что она допускает подпоследовательность,
+сходящуюся к слабому решению краевой задачи (\ref{eq:1.6})"=(\ref{eq:1.8}) при стремлении параметра приближения $\varepsilon$ к нулю. 
+
+Рассмотрим следующие операторы:
+
+\begin{equation*}
+    \begin{gathered}
+        A: V \rightarrow V^*, \ \langle Av, \varphi \rangle = \int\limits_\Omega \nabla v: \ \nabla \varphi \ dx, \ v, \varphi \in V;
+    \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+    \begin{gathered}
+        N: X \rightarrow X^*, \ \langle Nv, \varphi \rangle = \int\limits_\Omega \nabla(\Delta v): \ \nabla(\Delta\varphi) \ dx, \ v, \varphi \in V;
+    \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+    \begin{gathered}
+        B_1: L_4(\Omega)^n \rightarrow V^*
+        , \ \langle B_1(v), \varphi \rangle = \int\limits_\Omega \sum_{i,j=1}^n v_i v_j \frac{\partial \varphi_j}{\partial x_i} dx
+        , \ v \in L_4(\Omega)^n, \ \varphi \in V;
+    \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+    \begin{gathered}
+        B_2: V \rightarrow X^*
+        , \ \langle B_2(v), \varphi \rangle = \int\limits_\Omega \sum_{i,j,k=1}^n v_k \frac{\partial v_i}{\partial x_j}
+        \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} \ dx
+        , \ v \in V, \ \varphi \in X;
+    \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+    \begin{gathered}
+        B_3: V \rightarrow X^*
+        , \ \langle B_3(v), \varphi \rangle = \int\limits_\Omega \sum_{i,j,k=1}^n v_k \frac{\partial v_j}{\partial x_i}
+        \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} \ dx
+        , \ v \in V, \ \varphi \in X;
+    \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+    \begin{gathered}
+        D: V \rightarrow X^*
+        , \ \langle D(v), \varphi \rangle = \int\limits_\Omega (\mathcal{E}(v) W_\rho (v) - W_\rho (v) \mathcal{E}(v)): \ \nabla \varphi \ dx, \\
+        v \in V, \ \varphi \in X;
+    \end{gathered}
+\end{equation*}
+
+Поскольку в равенстве (\ref{eq:3.1}) функция $\varphi \in X$ произвольна, это соотношение эквивалентно следующему операторному уравнению:
+
+\begin{equation}\label{eq:3.2}
+    \begin{gathered}
+        \varepsilon N v + \nu A v - B_1(v) - \varkappa B_2(v) - \varkappa B_3(v) + 2 \varkappa D(v) = f
+    \end{gathered}
+\end{equation}
+
+Таким образом, слабым решением аппроксимирующей задачи является решение $\varphi \in X$ операторного уравнения (\ref{eq:3.2}).
+
+Мы также определяем следующие операторы:
+
+\begin{equation*}
+    \begin{gathered}
+        L: X \rightarrow X^*, \ L(v) = \varepsilon N v; \\
+        K: X \rightarrow X^*, \ K(v) = \nu A v - B_1(v) - \varkappa B_2(v) - \varkappa B_3(v) + 2 \varkappa D(v).
+    \end{gathered}
+\end{equation*}
+
+Задача нахождения решения уравнения (\ref{eq:3.2}) эквивалентна задаче нахождения решения для следующего операторного уравнения:
+\begin{equation}\label{eq:3.3}
+    \begin{gathered}
+        L(v)+K(v)=f
+    \end{gathered}
+\end{equation}
+
+Мы будем использовать следующие утверждения (доказательства леммы (\ref{lm:3.1}) - леммы (\ref{lm:3.4}) можно найти, например, в [5]).
+\begin{lemma}\label{lm:3.1}
+    Оператор $A:V\rightarrow V^*$ непрерывен и имеет место оценка 
+    $$\parallel Av\parallel_{V^*}\leqslant C_1\parallel v\parallel_V.$$
+    Более того, оператор $A:X\rightarrow X^*$ вполне непрерывеню
+\end{lemma}
+
+\begin{lemma}\label{lm:3.2}
+    Оператор $L:X\rightarrow X^*$ непрерывен, обратим и для него имеет место оценка:
+    $$\parallel Lv\parallel_{X^*}\leqslant\varepsilon\parallel v\parallel_v.$$
+\end{lemma}
+
+\begin{lemma}\label{lm:3.3}
+    Для опреатора $B_1:L_4(\Omega)^n\varepsilon V^*$ непрерывен и имеет место следующая оценка:
+    $$\parallel B_1v\parallel_{V^*}\leqslant C_2\parallel v\parallel^2_{L_4(\Omega)^n}.$$
+    Более того, оператор $B_1:X\rightarrow X^*$ вполне непрерывен.
+\end{lemma}
+
+\begin{lemma}\label{lm:3.4}
+    Отображение $B_i:V\rightarrow X^*, i=2,3$ непрерывно и имеет место следующая оценка:
+    $$\parallel B_iv\parallel_{X^*}\leqslant C_3\parallel v\parallel^2_V.$$
+    Боле того, оператор $B_i:X\rightarrow X^*$ полностью непрерывен.
+\end{lemma}
