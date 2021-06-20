@@ -352,74 +352,32 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
 Аналогично для $\lambda=1$ имеем $\nu\|v\|^2_V\leqslant\lambda\frac{\|f\|^2_{V^*}}{\nu}$. Это доказывает \ref{eq:3.6} и \ref{eq:3.7}.
 \end{proof}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{theorem}
+    Операторное уравнение \ref{eq:3.3} имеет хотя бы одно слабое решение $v\in X:$
+\end{theorem}
+
+\begin{proof}
+    Для доказательства этой теоремы мы используем теорию степени Лере-Шаудера для вполне непрерывных 
+    векторных полей. В силу априорной оценки \ref{eq:3.6}, все решения семейства уравнений \ref{eq:3.5} содержатся в шаре 
+    $B_R \subset X$ радиуса $R = C_{14} +1$. По лемме \ref{lm:3.6} отображение $[-K (\cdot) + f]: X \rightarrow X^*$
+    вполне непрерывно. В силу леммы\ref{lm:3.2} оператор $L^{-1}: X^*\rightarrow X$ непрерывен.
+
+    Таким образом, отображение $L^{-1}[-K (\cdot) + f]: X \rightarrow X$ вполне непрерывно.  
+    Тогда отображение $G:[0, 1] \times X\rightarrow X, G (\lambda, v) = \lambda L^{-1}[- K (v) + f]$ 
+    полностью непрерывно по двумерному аргументу $(\lambda, v)$.  Из сказанного выше получаем, что вполне непрерывное 
+    векторное поле $\Phi(\lambda, v) = v - G (\lambda, v)$ не обращается в нуль на границе $B_R$. По гомотопической 
+    инвариантности степени получаем
+    $$deg_{LS}(\Phi(0,\cdot),B_R,0)=deg_{LS}(\Phi(1,\cdot),B_R,0).$$
+    Напомним, что $\Phi(0,\cdot) = I$ и по свойству нормализации степени $deg_{LS} (I, B_R, 0) = 1$. 
+    Следовательно, $deg_{LS} ((1,\cdot), BR.0) = 1$. 
+    
+    Таким образом, мы видим, что существует по крайней мере решение $v\in X$ уравнение
+    $$v-L^{-1}[-K(v)+f]=0$$
+    и следовательно уравнение \ref{eq:3.3}.
+
+    Поскольку существует решение $v\in X$ уравнения \ref{eq:3.3}, из сказанного выше следует, 
+    что аппроксимирующая задача имеет хотя бы одно слабое решение $v\in X$.
+\end{proof}
 
 \section{Доказательство теоремы 2.1}
 
@@ -428,14 +386,14 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
     По теореме 3.2 для любого $\varepsilon_m$ существует слабое решение $v_m \in X \subset V$ задачи аппроксимации.
     Таким образом, каждое $v_m$ удовлетворяет уравнению
 
-    $$\varepsilon_m \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx -
-    \int\limits_{\Omega}\sum_{i,j=1}^n (v_m)_i (v_m) \frac{\partial \varphi_j}{\partial x_i} dx + \nu
-    \int\limits_{\Omega} \nabla v_m: \nabla \varphi dx$$
-    $$-\varkappa \int\limits_{\Omega}\sum_{i,j,k=1}^n (v_m)_k
-    \frac{\partial (v_m)_i}{\partial x_j} \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx - \varkappa \int\limits_{\Omega}\sum_{i,j,k=1}^n
-    (v_m)_k \frac{\partial (v_m)_j}{\partial x_i} \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx$$
     \begin{equation}\label{eq:4.1}
         \begin{gathered}
+            \varepsilon_m \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx -
+            \int\limits_{\Omega}\sum_{i,j=1}^n (v_m)_i (v_m) \frac{\partial \varphi_j}{\partial x_i} dx + \nu
+            \int\limits_{\Omega} \nabla v_m: \nabla \varphi dx\\
+            -\varkappa \int\limits_{\Omega}\sum_{i,j,k=1}^n (v_m)_k
+            \frac{\partial (v_m)_i}{\partial x_j} \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx - \varkappa \int\limits_{\Omega}\sum_{i,j,k=1}^n
+            (v_m)_k \frac{\partial (v_m)_j}{\partial x_i} \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx\\
             +2\varkappa \int\limits_{\Omega} \bigg(\mathcal{E}(v_m)W_\rho (v_m) - W_\rho(v_m)\mathcal{E}(v_m)\bigg): \nabla dx =
             \langle f, \varphi \rangle.
         \end{gathered}
@@ -512,7 +470,3 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
     \end{equation*}
     Это доказывает, что $v_* \in V$. Это завершает доказательство теоремы 2.1.
 \end{proof}
-
-\begin{theorem}
-    
-\end{theorem}
