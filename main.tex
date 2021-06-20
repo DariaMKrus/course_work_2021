@@ -1,13 +1,13 @@
 \begin{equation}\label{eq:1.6}
     \begin{gathered}
-        \sum_{i=1}^n v_i\frac{\partial v}{\partial x_j}-\nu\Delta v- 2\varkappa Div\bigg(v_k\frac{\partial\mathcal{E}(v)}
-        {\partial x_k}\bigg)-\\-2\varkappa Div\bigg(\mathcal{E}(v)W_p(v)-W_p(v)\mathcal{E}(v)\bigg)+grad p=f, x\in\Omega
+        \sum_{i=1}^n v_i\frac{\partial v}{\partial x_i}-\nu\Delta v- 2\varkappa Div\bigg(v_k\frac{\partial\mathcal{E}(v)}
+        {\partial x_k}\bigg)-\\-2\varkappa Div\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}(v)\bigg)+grad \ p=f, \ x\in\Omega,
     \end{gathered}
 \end{equation}
 
 \begin{equation}\label{eq:1.7}
     \begin{gathered}
-        div \ v=0, x\in\Omega
+        div \ v=0, \ x\in\Omega.
     \end{gathered}
 \end{equation}
 
@@ -20,7 +20,7 @@
 
 В настоящей работе исследуется существование слабого решения краевой задачи (\ref{eq:1.6})"=(\ref{eq:1.8}), описывающего движение слабых
 водных растворов полимеров, заполняющих ограниченную область $\Omega \in R^n$, $n = 2,3$, которое определяется реологическим
-соотношением  со сглаженной производной Яуманна.
+соотношением со сглаженной производной Яуманна.
 
 Для исследования используются аппроксимационные и топологические методы
 (см., например, [9], [10]). Краевая задача рассматривается как операторное уравнение. Используемые операторы часто не
@@ -35,33 +35,33 @@
 
 Обозначим через $C_0^{\infty}(\Omega)^n$ пространство функций класса $C^{\infty}$, отображаемых $\Omega$ в $R^n$ с
 компактным носителем в $\Omega$. Также нам потребуется определение следующих функциональных пространств
-$$\mathcal{V}={v(x)=(v_1,...,v_n)\in C_0^{\infty}(\Omega)^n: div \ v = 0};$$
+$$\mathcal{V}=\{v(x)=(v_1,...,v_n)\in C_0^{\infty}(\Omega)^n: div \ v = 0\};$$
 $V$ - замыкание на $\mathcal{V}$ по норме пространсва $W^1_2(\Omega)^n$
 со скалырным произведением
 $$((v,w))=\int\limits_{\Omega}\nabla v : \nabla w dx.$$
 Здесь символ $\nabla v : \nabla w, v=(v_1,...,v_n), w=(w_1,...,w_n)$, обозначает покомпактное метрическое умножение
 $$\nabla v : \nabla w = \sum_{i,j=1}^n \frac{\partial v_i}{\partial x_j}\frac{\partial w_i}{\partial x_j} $$
 Пусть $X$ - замыкание $V$ относительно нормы пространства $W_2^3(\Omega)^n$. Рассмотрим пространство $X$ с нормой:
-$$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta v)dx\bigg)^{1/2}$$
+$$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta v)dx\bigg)^{1/2}.$$
 
 \begin{definition}
     Пусть $f$ принадлежит $V^*$. Слабым решением краевой задачи (\ref{eq:1.6})"=(\ref{eq:1.8}) называется функция $v\in V$ такая,
-    что для любого $y\in X$ она удовлетворяет равенству
+    что для любого $\varphi \in X$ она удовлетворяет равенству
     \begin{equation}\label{eq:2.1}
         \begin{gathered}
-            \nu\int\limits_{\Omega}\nabla v: \nabla w dx-\int\limits_{\Omega} \sum_{i,j=1}^n v_iv_j\frac{\partial \varphi_j}
-            {\partial x_i}dx-\varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial v_i}{\partial x_j}\frac{\partial^2 \varphi_i}{\partial x_j\partial x_k}dx- \\
-            \varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial v_i}{\partial x_j}\frac{\partial^2 \varphi_i}
-            {\partial x_j\partial x_k}dx+\\
+            \nu\int\limits_{\Omega}\nabla v: \nabla \varphi dx-\int\limits_{\Omega} \sum_{i,j=1}^n v_iv_j\frac{\partial \varphi_j}
+            {\partial x_i}dx-\varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial v_i}{\partial x_j}\frac{\partial^2 \varphi_j}{\partial x_i\partial x_k}dx- \\
+            \varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial v_i}{\partial x_j}\frac{\partial^2 \varphi_j}
+            {\partial x_i\partial x_k}dx+\\
             +2\varkappa\int\limits_{\Omega}(\mathcal{E}(v)W_p(v)-W_p(v)\mathcal{E}(v)):
-            \nabla\varphi dx=\langle f,\varphi \rangle
+            \nabla\varphi dx=\langle f,\varphi \rangle.
         \end{gathered}
     \end{equation}
 \end{definition}
 Основным результатом статьи является следующая теорема.
 
 \begin{theorem}
-    Для любой $f\in V^*$ краевая задача (\ref{eq:1.6})"=(\ref{eq:1.8}) имеет хотя бы одно слабое решение $v_*\in V$
+    Для любой $f\in V^*$ краевая задача (\ref{eq:1.6})"=(\ref{eq:1.8}) имеет хотя бы одно слабое решение $v_*\in V$.
 \end{theorem}
 
 \section{Аппроксимационная задача}
@@ -90,7 +90,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 
 \begin{equation}\label{eq:3.1}
     \begin{gathered}
-        + 2 \varkappa \int\limits_\Omega (\mathcal{E}(v) W_\rho (v) - W_\rho (v) \mathcal{E}(v)): \ \nabla \varphi
+        + 2 \varkappa \int\limits_\Omega \bigg(\mathcal{E}(v) W_\rho (v) - W_\rho (v) \mathcal{E}(v)\bigg): \ \nabla \varphi dx
         = \langle f, \varphi \rangle.
     \end{gathered}
 \end{equation}
@@ -118,7 +118,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 
 \begin{equation*}
     \begin{gathered}
-        N: X \rightarrow X^*, \ \langle Nv, \varphi \rangle = \int\limits_\Omega \nabla(\Delta v): \ \nabla(\Delta\varphi) \ dx, \ v, \varphi \in V;
+        N: X \rightarrow X^*, \ \langle Nv, \varphi \rangle = \int\limits_\Omega \nabla(\Delta v): \ \nabla(\Delta\varphi) \ dx, \ v, \varphi \in X;
     \end{gathered}
 \end{equation*}
 
@@ -151,7 +151,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 \begin{equation*}
     \begin{gathered}
         D: V \rightarrow X^*
-        , \ \langle D(v), \varphi \rangle = \int\limits_\Omega (\mathcal{E}(v) W_\rho (v) - W_\rho (v) \mathcal{E}(v)): \ \nabla \varphi \ dx, \\
+        , \ \langle D(v), \varphi \rangle = \int\limits_\Omega \bigg(\mathcal{E}(v) W_\rho (v) - W_\rho (v) \mathcal{E}(v)\bigg): \ \nabla \varphi \ dx, \\
         v \in V, \ \varphi \in X;
     \end{gathered}
 \end{equation*}
@@ -178,7 +178,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 Задача нахождения решения уравнения (\ref{eq:3.2}) эквивалентна задаче нахождения решения для следующего операторного уравнения:
 \begin{equation}\label{eq:3.3}
     \begin{gathered}
-        L(v)+K(v)=f
+        L(v)+K(v)=f.
     \end{gathered}
 \end{equation}
 
@@ -191,12 +191,12 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 
 \begin{lemma}\label{lm:3.2}
     Оператор $L:X\rightarrow X^*$ непрерывен, обратим и для него имеет место оценка:
-    $$\parallel Lv\parallel_{X^*}\leqslant\varepsilon\parallel v\parallel_v.$$
+    $$\parallel Lv\parallel_{X^*}\leqslant\varepsilon\parallel v\parallel_X.$$
     Более того, оператор $L^{-1}:X^*\rightarrow X$ вполне непрерывен.
 \end{lemma}
 
 \begin{lemma}\label{lm:3.3}
-    Для опреатора $B_1:L_4(\Omega)^n\varepsilon V^*$ непрерывен и имеет место следующая оценка:
+    Для опреатора $B_1:L_4(\Omega)^n \rightarrow V^*$ непрерывен и имеет место следующая оценка:
     $$\parallel B_1v\parallel_{V^*}\leqslant C_2\parallel v\parallel^2_{L_4(\Omega)^n}.$$
     Более того, оператор $B_1:X\rightarrow X^*$ вполне непрерывен.
 \end{lemma}
@@ -218,26 +218,26 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 
 \begin{proof}
     Начнем о соценки $\mathcal{E}$ and $W_{\rho}$.
-    $$\parallel\mathcal{E}\parallel^2_{L_2(\Omega)}=\sum_{i,j=1}^n \parallel\mathcal{E}_{i,j}(v)\parallel^2_{L_2(\Omega)}
-    \leqslant С_5 \sum_{i,j=1}^n\int\limits_{\Omega}(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_i}{\partial x_j})^2 dx$$
-    $$=C_5\sum_{i,j=1}^n\int\limits_{\Omega}(\frac{\partial v_i}{\partial x_j}\frac{\partial v_i}{\partial x_j}+
-    2\frac{\partial v_i}{\partial x_j}\frac{\partial v_j}{\partial x_i}+\frac{\partial v_j}{\partial x_j}\frac{\partial v_j}{\partial x_j})dx$$
+    $$\parallel\mathcal{E}(v)\parallel^2_{L_2(\Omega)}=\sum_{i,j=1}^n \parallel\mathcal{E}_{i,j}(v)\parallel^2_{L_2(\Omega)}
+    \leqslant C_5 \sum_{i,j=1}^n\int\limits_{\Omega}\bigg(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\bigg)^2 dx$$
+    $$=C_5\sum_{i,j=1}^n\int\limits_{\Omega}\bigg(\frac{\partial v_i}{\partial x_j}\frac{\partial v_i}{\partial x_j}+
+    2\frac{\partial v_i}{\partial x_j}\frac{\partial v_j}{\partial x_i}+\frac{\partial v_j}{\partial x_i}\frac{\partial v_j}{\partial x_i}\bigg)dx$$
     $$=C_5\sum_{i,j=1}^n\bigg[\int\limits_{\Omega}\frac{\partial v_i}{\partial x_j}\frac{\partial v_i}{\partial x_j}dx-
     2\int\limits_{\Omega} v_i\frac{\partial^2 v_j}{\partial x_i\partial x_j}dx+\int\limits_{\Omega}\frac{\partial v_j}{\partial x_i}\frac{\partial v_j}{\partial x_i}dx\bigg]$$
     $$=C_5\bigg[\int\limits_{\Omega}\nabla v : \nabla v dx +\int\limits_{\Omega}\nabla v : \nabla v dx\bigg]\leqslant
-    2C_5\parallel v\parallel^2_V$$
+    2C_5\parallel v\parallel^2_V.$$
     Далее, $\parallel\mathcal{E}\parallel_{L_2(\Omega)}\leqslant C_6\parallel v\parallel_V$.
     $$\parallel(W_{\rho})_{ij}(v)\parallel_{L_2(\Omega)}\leqslant\parallel(W_{\rho})_{ij}(v)\parallel_{L_{\infty}(\Omega)}$$
     $$\leqslant \frac{1}{2} \sup_{x\in\Omega}\bigg|\int\limits_{\Omega}\rho (x-y)(\frac{\partial v_i(y)}{\partial y_j}-\frac{\partial v_j(y)}{\partial y_i})dy\bigg|$$
-    $$\leqslant \frac{1}{2}\sup\limits_{x\in\Omega} \bigg|-\frac{\partial\rho (x-y)}{\partial y_j}v_i(y)+\frac{\partial\rho (x-y)}{\partial y_i}v_i(y)dy\bigg|$$
-    $$\leqslant\parallel grad\rho\parallel_{L_2(\Omega)}\parallel v(t)\parallel_{L_2(\Omega)}.$$
+    $$\leqslant \frac{1}{2}\sup\limits_{x\in\Omega} \bigg|-\frac{\partial\rho (x-y)}{\partial y_j}v_i(y)+\frac{\partial\rho (x-y)}{\partial y_i}v_j(y)dy\bigg|$$
+    $$\leqslant\parallel grad \ \rho\parallel_{L_2(\Omega)}\parallel v(t)\parallel_{L_2(\Omega)}.$$
     По определению, для любого $v\in V, \varphi\in X$ имеем
     $$\mid\langle D(v),\varphi\rangle\mid=\bigg|\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}(v)\bigg):\nabla\varphi dx\bigg|\leqslant$$
     $$\leqslant C_7\bigg[\|\mathcal{E}(v)\|_{L_2(\Omega)}\|W_{\rho}(v)\|_{L_2(\Omega)}+\|W_{\rho}(v)\|_{L_2(\Omega)}\|\mathcal{E}(v)\|_{L_2(\Omega)}\bigg]\|\nabla\varphi\|_{C(\Omega)^n}\leqslant$$
-    $$\leqslant C_8\| v\|^2_V\|\varphi\|_X$$
+    $$\leqslant C_8\| v\|^2_V\|\varphi\|_X.$$
     Отсюда получаем оценку \ref{eq:3.3}.
     Теперь докажем, что оператор $D$ непрерывен. Для любых $v^m,v^0\in V$, имеем:
-    $$\bigg|\langle D(v^m),\varphi\rangle-\langle D(v^0),\varphi\rangle\bigg|=\bigg|\int\limits_{\Omega}\bigg(\mathcal{E}(v^m)W_{\rho}(v^m)-W_{\rho}(v^m)\mathcal{E}(v^m)\bigg):\nabla\varphi$$
+    $$\bigg|\langle D(v^m),\varphi\rangle-\langle D(v^0),\varphi\rangle\bigg|=\bigg|\int\limits_{\Omega}\bigg(\mathcal{E}(v^m)W_{\rho}(v^m)-W_{\rho}(v^m)\mathcal{E}(v^m)\bigg):\nabla\varphi dx$$
     $$-\int\limits_{\Omega}\bigg(\mathcal{E}(v^0)W_{\rho}(v^0)-W_{\rho}(v^0)\mathcal{E}(v^0)\bigg):\nabla\varphi dx\bigg|\leqslant C_9\bigg|\int\limits_{\Omega}\mathcal{E}(v^m)W_{\rho}(v^m)$$
     $$-W_{\rho}(v^m)\mathcal{E}(v^m)-\mathcal{E}(v^0)W_{\rho}(v^0)+W_{\rho}(v^0)\mathcal{E}(v^0)dx\bigg|\|\varphi\|_X$$
     $$\leqslant C_9\bigg|\int\limits_{\Omega}\mathcal{E}(v^m)\bigg(W_{\rho}(v^m)-W_{\rho}(v^0)\bigg)+\bigg(\mathcal{E}(v^m)-\mathcal{E}(v^0)\bigg)W_{\rho}(v^0)$$
@@ -247,8 +247,8 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
     $$\times\|\mathcal{E}(v^0)\|_{L_2(\Omega)}\bigg]\|\varphi\|_X\leqslant C_{11}\bigg[\|v^m\|_V\|v^m-v^0\|_V+\|v^m-v^0\|_V\|v^0\|_V$$
     $$+\|v^m\|_V\|v^m-v^0\|_V+\|v^m-v^0\|_V\|v^0\|_V\bigg]\|\varphi\|_X$$
     $$\leqslant C_{12}\bigg(\|v^m\|_V+\|v^0\|_V\bigg)\|v^m-v^0\|_V\|\varphi\|_X$$
-    Таким образом, мы имеем $\|D(v^m)-D(v^0)\|_X\leqslant C_{13}(\|v^m\|_V+\|v^0\|_V)\|v^m-v^0\|_V$
-    Пусть последовательность ${v^m}\subset V$ сходится к некторой функции $v^0\in V$. Тогда непрерывность отображения $D:V\rightarrow X$
+    Таким образом, мы имеем $\|D(v^m)-D(v^0)\|_X\leqslant C_{13}(\|v^m\|_V+\|v^0\|_V)\|v^m-v^0\|_V$.
+    Пусть последовательность $\{v^m\}\subset V$ сходится к некторой функции $v^0\in V$. Тогда непрерывность отображения $D:V\rightarrow X$
     следует из предыдущего равенства.
 \end{proof}
 
@@ -270,7 +270,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 На ряду с уравнением \ref{eq:3.3} рассмотрим следующее семейство операторных уравнений:
 \begin{equation}\label{eq:3.5}
     \begin{gathered}
-    L(v)+\lambda K(v)=\lambda f, \lambda\in [0,1]
+    L(v)+\lambda K(v)=\lambda f, \ \lambda\in [0,1],
     \end{gathered}
 \end{equation}
 что совпадает с уравнением \ref{eq:3.3} для $\lambda=1$.
@@ -279,26 +279,26 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
     Если $v\in X$ является решением операторного уравнения \ref{eq:3.5} для некоторых $\lambda\in [0,1]$, тогда справедлива следующая оценка:
     \begin{equation}\label{eq:3.6}
         \begin{gathered}
-            \varepsilon\|v\|^2_X\leqslant C_{14}, \textrm{ где } C_{14}=\frac{\|f\|^2_{V^*}}{2\nu}
+            \varepsilon\|v\|^2_X\leqslant C_{14}, \textrm{ где } C_{14}=\frac{\|f\|^2_{V^*}}{2\nu}.
         \end{gathered}
     \end{equation}
     Более того, если $\lambda = 1$, тогда справедлива следующая оценка:
     \begin{equation}\label{eq:3.7}
         \begin{gathered}
-            \nu\|v\|^2_X\leqslant C_{15}, \textrm{ где } C_{15}=\frac{\|f\|^2_{V^*}}{\nu}
+            \nu\|v\|^2_V\leqslant C_{15}, \textrm{ где } C_{15}=\frac{\|f\|^2_{V^*}}{\nu}.
         \end{gathered}
     \end{equation}
 \end{theorem}
 
 \begin{proof}
-Пусть $X$ --- решение \ref{eq:3.5}. Тогда для любого $\varphi\in  X$ выполняется уравнение:
+Пусть $v \in X$ --- решение \ref{eq:3.5}. Тогда для любого $\varphi\in  X$ выполняется уравнение:
 \begin{equation}\label{eq:3.8}
     \begin{gathered}
         \varepsilon\int\limits_{\Omega}\nabla (\Delta v):\nabla (\Delta\varphi)dx - \lambda\int\limits_{\Omega}\sum_{i,j=1}^n v_iv_j
         \frac{\partial\varphi_j}{\partial x_i}dx +\lambda\nu\int\limits_{\Omega}\nabla v : \nabla\varphi dx \\
         -\lambda\varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial v_i}{\partial x_j}\frac{\partial^2 \varphi_j}{\partial x_i\partial x_k}dx 
         -\lambda\varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial v_j}{\partial x_i}\frac{\partial^2 \varphi_j}{\partial x_i\partial x_k}dx \\
-        +2\lambda\varkappa\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}\bigg):\nabla\varphi dx=\lambda\langle f, v\rangle
+        +2\lambda\varkappa\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}(v)\bigg): \ \nabla\varphi dx=\lambda\langle f, v\rangle
     \end{gathered}
 \end{equation}
     Запишем, что  
@@ -309,19 +309,19 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
     $$-2\int\limits_{\Omega}\sum_{i,j,k=1}^n\frac{\partial v_k}{\partial x_k}\mathcal{E}_{ij}(v)\frac{\partial\varphi_j}{\partial x_i}dx
     =-2\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k \frac{\partial\mathcal{E}_{ij}(v)}{\partial x_k}\frac{\partial\varphi_j}{\partial x_i}dx.$$
     Следовательно, \ref{eq:3.8} запишется в форме
-    $$\varepsilon\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta\varphi)dx-\lambda\int\limits_{\Omega}\sum_{i,j,k=1}^n v_iv_j\frac{\partial\varphi_j}{\partial x_i}dx$$
-    $$+\lambda\nu\int\limits_{\Omega}\nabla v:\nabla\varphi dx+2\lambda\nu\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial\mathcal{E}_{ij}(v)}{\partial x_k}\frac{\partial\varphi_j}{\partial x_i}dx$$
-    $$+2\lambda\varkappa\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}(v)\bigg):\nabla\varphi dx=\lambda\langle f, v\rangle$$
+    $$\varepsilon\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta\varphi)dx-\lambda\int\limits_{\Omega}\sum_{i,j=1}^n v_iv_j\frac{\partial\varphi_j}{\partial x_i}dx$$
+    $$+\lambda\nu\int\limits_{\Omega}\nabla v:\nabla\varphi dx+2\lambda\varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial\mathcal{E}_{ij}(v)}{\partial x_k}\frac{\partial\varphi_j}{\partial x_i}dx$$
+    $$+2\lambda\varkappa\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}(v)\bigg):\nabla\varphi dx=\lambda\langle f, \varphi\rangle.$$
     Поскольку последнее равенство выполняется для всех $\varphi\in X$, это верно для $\varphi=v$ так же:
     \begin{equation}\label{eq:3.9}
         \begin{gathered}
-            \varepsilon\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta\varphi)dx-\lambda\int\limits_{\Omega}\sum_{i,j,k=1}^n v_iv_j\frac{\partial v_j}{\partial x_i}dx \\
-            +\lambda\nu\int\limits_{\Omega}\nabla v:\nabla\varphi+2\lambda\varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial\mathcal{E}_{ij}(v)}{\partial x_k}\frac{\partial\varphi_j}{\partial x_i}dx \\
+            \varepsilon\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta\varphi)dx-\lambda\int\limits_{\Omega}\sum_{i,j=1}^n v_iv_j\frac{\partial v_j}{\partial x_i}dx \\
+            +\lambda\nu\int\limits_{\Omega}\nabla v:\nabla vdx+2\lambda\varkappa\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial\mathcal{E}_{ij}(v)}{\partial x_k}\frac{\partial v_j}{\partial x_i}dx \\
             +2\lambda\varkappa\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}(v)\bigg):\nabla v dx=\lambda\langle f, v\rangle.
         \end{gathered}
     \end{equation}
 Сведем слогаемыемв левой части уравнения \ref{eq:3.9} следующим образом:
-$$\varepsilon\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta\varphi)dx=\varepsilon\|v\|^2_X;$$
+$$\varepsilon\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta v)dx=\varepsilon\|v\|^2_X;$$
 $$\int\limits_{\Omega}\sum_{i,j=1}^n v_iv_j\frac{\partial v_j}{\partial x_i}dx=\int\limits_{\Omega}\sum_{i,j=1}^n v_i
 \frac{\partial (v_jv_j)}{\partial x_i}dx=-\int\limits_{\Omega}\sum_{i,j=1}^n\frac{\partial v_i}{\partial x_i}v_jv_jdx=0$$
 $$\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}(v)\bigg):\nabla v dx=\frac{1}{2}\int\limits_{\Omega}\bigg(\mathcal{E}(v)
@@ -331,7 +331,7 @@ $$+\frac{1}{2}\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\ma
 \mathcal{E}_{ij}(W_{\rho})_{jk}\mathcal{E}_{ik}$$
 $$-(W_{\rho})_{jk}\mathcal{E}_{ki}\mathcal{E}_{ji}\bigg)dx+\frac{1}{2}\sum_{i,j,k=1}^n\int\limits_{\Omega}\bigg(\mathcal{E}_{ij}(W_{\rho})_{jk}W_{ik}-
 (W_{\rho})_{kj}\mathcal{E}_{ji}W_{ki}\bigg) dx$$
-$$\frac{1}{2}\sum_{i,j,k=1}^n\int\limits_{\Omega}\mathcal{E}_{ij}(W_{\rho})_{jk}\mathcal{E}_{ik}-\mathcal{E}_{ij}(W_{\rho})_{jk}\mathcal{E}_{ik}+
+$$=\frac{1}{2}\sum_{i,j,k=1}^n\int\limits_{\Omega}\mathcal{E}_{ij}(W_{\rho})_{jk}\mathcal{E}_{ik}-\mathcal{E}_{ij}(W_{\rho})_{jk}\mathcal{E}_{ik}dx+
 \frac{1}{2}\sum_{i,j,k=1}^n\int\limits_{\Omega}\mathcal{E}_{ij}(W_{\rho})_{jk}W_{ik}$$
 $$-\mathcal{E}_{ij}(W_{\rho})_{jk}W_{ik}dx=0;$$
 $$\int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial\mathcal{E}_{ij}(v)}{\partial x_k}\frac{\partial v_j}{\partial x_i}dx=\frac{1}{2}\bigg(
@@ -341,14 +341,14 @@ $$+\int\limits_{\Omega}\sum_{i,j,k=1}^nv_k\frac{\partial\mathcal{E}_{ij}(v)}{\pa
 $$=-\int\limits_{\Omega}\sum_{k=1}^n \frac{\partial v_k}{\partial x_k}\sum_{i,j=1}^n\mathcal{E}_{ij}(v)\mathcal{E}_{ij}(v)dx=0.$$
 Здесь указано, что тензор скорости дифформации $\mathcal{E}(u)$ симметричен, а тензоры $W_{\rho}(v)$ и $W(v)$ кососимметричны. 
 Следовательно, уравнения \ref{eq:3.9} переписать в следующем виде:
-$$\varepsilon\|v\|^2_X+\lambda\nu\|v\|^2_V=\lambda\langle f,v\rangle$$
+$$\varepsilon\|v\|^2_X+\lambda\nu\|v\|^2_V=\lambda\langle f,v\rangle.$$
 Используя верхнюю оценку правой части последнего уравнения.
 $$\lambda\langle f,v\rangle\leqslant\lambda |\langle f,v\rangle|\leqslant\lambda\|f\|_{V^*}\|v\|_V\leqslant\|f\|_{V^*}\|v\|_V\leqslant
 \lambda\frac{\|f\|_{V^*}^2}{2\delta}+\lambda\frac{\delta\|v\|_V^2}{2}$$
 для $\delta=\nu$ имеем
 $$\varepsilon\|v\|^2_X+\lambda\nu\|v\|^2_V\leqslant\lambda\frac{\|f\|^2_{V^*}}{2\nu}+\lambda\frac{\nu\|v\|^2_V}{2},$$
 $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^2_{V^*}}{2\nu}, \varepsilon\|v\|^2_X\leqslant\lambda
-\frac{\|f\|^2_{V^*}}{2\nu}\leqslant\frac{\|f\|^2_{V^*}}{2\nu}$$
+\frac{\|f\|^2_{V^*}}{2\nu}\leqslant\frac{\|f\|^2_{V^*}}{2\nu}.$$
 Аналогично для $\lambda=1$ имеем $\nu\|v\|^2_V\leqslant\lambda\frac{\|f\|^2_{V^*}}{\nu}$. Это доказывает \ref{eq:3.6} и \ref{eq:3.7}.
 \end{proof}
 
@@ -357,10 +357,10 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
 \end{theorem}
 
 \begin{proof}
-    Для доказательства этой теоремы мы используем теорию степени Лере-Шаудера для вполне непрерывных 
+    Для доказательства этой теоремы мы используем теорию степени Лере"=Шаудера для вполне непрерывных 
     векторных полей. В силу априорной оценки \ref{eq:3.6}, все решения семейства уравнений \ref{eq:3.5} содержатся в шаре 
     $B_R \subset X$ радиуса $R = C_{14} +1$. По лемме \ref{lm:3.6} отображение $[-K (\cdot) + f]: X \rightarrow X^*$
-    вполне непрерывно. В силу леммы\ref{lm:3.2} оператор $L^{-1}: X^*\rightarrow X$ непрерывен.
+    вполне непрерывно. В силу леммы \ref{lm:3.2} оператор $L^{-1}: X^*\rightarrow X$ непрерывен.
 
     Таким образом, отображение $L^{-1}[-K (\cdot) + f]: X \rightarrow X$ вполне непрерывно.  
     Тогда отображение $G:[0, 1] \times X\rightarrow X, G (\lambda, v) = \lambda L^{-1}[- K (v) + f]$ 
@@ -389,22 +389,26 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
     \begin{equation}\label{eq:4.1}
         \begin{gathered}
             \varepsilon_m \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx -
-            \int\limits_{\Omega}\sum_{i,j=1}^n (v_m)_i (v_m) \frac{\partial \varphi_j}{\partial x_i} dx + \nu
+            \int\limits_{\Omega}\sum_{i,j=1}^n (v_m)_i (v_m)_j \frac{\partial \varphi_j}{\partial x_i} dx + \nu
             \int\limits_{\Omega} \nabla v_m: \nabla \varphi dx\\
             -\varkappa \int\limits_{\Omega}\sum_{i,j,k=1}^n (v_m)_k
             \frac{\partial (v_m)_i}{\partial x_j} \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx - \varkappa \int\limits_{\Omega}\sum_{i,j,k=1}^n
             (v_m)_k \frac{\partial (v_m)_j}{\partial x_i} \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx\\
-            +2\varkappa \int\limits_{\Omega} \bigg(\mathcal{E}(v_m)W_\rho (v_m) - W_\rho(v_m)\mathcal{E}(v_m)\bigg): \nabla dx =
+            +2\varkappa \int\limits_{\Omega} \bigg(\mathcal{E}(v_m)W_\rho (v_m) - W_\rho(v_m)\mathcal{E}(v_m)\bigg): \nabla\varphi dx =
             \langle f, \varphi \rangle.
         \end{gathered}
     \end{equation}
+
+    Тогда по определению слабой сходимости
+    $$\nu\int\limits_{\Omega}\nabla v_m: \nabla\varphi dx \rightarrow \nu \int\limits_{\Omega} \nabla v_*: \nabla\varphi dx
+    \textrm{ и } m \rightarrow +\infty, \ \varphi \in X.$$
 
     Тогда без ограничения общности (переходя при необходимости к последовательности) из (3.6) получаем, что
     $$\lim_{m \rightarrow \infty}\bigg| \varepsilon_m \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx \bigg| =$$
     $$=\lim_{m \rightarrow \infty} \sqrt{\varepsilon_m} \lim_{m \rightarrow \infty}\bigg|\sqrt{\varepsilon_m}
     \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx \bigg|$$
     так что мы получаем
-    $$\varepsilon_m \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx \rightarrow 0, \ m \rightarrow +\infty$$
+    $$\varepsilon_m \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx \rightarrow 0, \ m \rightarrow +\infty.$$
 
     Для остальных интегралов имеем
     \begin{equation*}
@@ -425,31 +429,31 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
             m \rightarrow +\infty;
         \end{gathered}
     \end{equation*}
-    Действительно, здесь последовательность $v_m$ сходится к $v_*$ cильно в $L_4(\Omega)^n$,
-    а $\nabla(v_m)$ сходится к $\nabla v_*$ слабо в $L_2(\Omega)^{n^2}$.
+    Действительно, здесь последовательность $v_m$ сходится к $v_*$ cильно в $L_4(\Omega)^n$
+    и $\nabla(v_m)$ сходится к $\nabla v_*$ слабо в $L_2(\Omega)^{n^2}$.
     Таким образом, результат сходится к произведению пределов. В итоге мы имеем
     \begin{equation*}
         \begin{gathered}
-            \int\limits_{\Omega} \bigg(\mathcal{E}(v_m)W_\rho (v_m) - W_\rho(v_*)\mathcal{E}(v_*)\bigg): \nabla\varphi dx\\
+            \int\limits_{\Omega} \bigg(\mathcal{E}(v_m)W_\rho (v_m) - \mathcal{E}(v_*)W_\rho(v_*)\bigg): \nabla\varphi dx\\
             = \int\limits_{\Omega} \bigg(\mathcal{E}(v_m)(W_\rho (v_m) - W_\rho(v_*))
             + (\mathcal{E}(v_m) - \mathcal{E}(v_*))W_\rho (v_*)\bigg): \nabla\varphi dx\\
             \leq ||\mathcal{E}(v_m)||_{L_2(\Omega)}||\nabla\varphi||_{L_2(\Omega)}||W_\rho(v_m - v_*)||_{L_\infty(\Omega)} +\\
-            + ||W_\rho(v_*)||_{L_\infty(\Omega)} \int\limits_{\Omega}\mathcal{E}(v_m - v_m): \nabla\varphi dx\\
+            + ||W_\rho(v_*)||_{L_\infty(\Omega)} \int\limits_{\Omega}\mathcal{E}(v_m - v_*): \nabla\varphi dx\\
             \leq ||\mathcal{E}(v_m)||_{L_2(\Omega)}||\nabla\varphi||_{L_2(\Omega)}||(v_m - v_*)||_{L_2(\Omega)} +\\
-            + ||W_\rho(v_*)||_{L_\infty(\Omega)} \int\limits_{\Omega}\mathcal{E}(v_m - v_m): \nabla\varphi dx\\
+            + ||W_\rho(v_*)||_{L_\infty(\Omega)} \int\limits_{\Omega}\mathcal{E}(v_m - v_*): \nabla\varphi dx\\
             \leq ||\mathcal{E}(v_m)||_{L_2(\Omega)}||\nabla\varphi||_{L_2(\Omega)}||(v_m - v_*)||_{L_4(\Omega)} +\\
-            + ||W_\rho(v_*)||_{L_\infty(\Omega)} \int\limits_{\Omega}\mathcal{E}(v_m - v_m): \nabla\varphi dx.
+            + ||W_\rho(v_*)||_{L_\infty(\Omega)} \int\limits_{\Omega}\mathcal{E}(v_m - v_*): \nabla\varphi dx.
         \end{gathered}
     \end{equation*}
-    Напомним, что последовательность $v_m$ сходится к $v_*$ сильно в $L_4(\Omega)^n$,
-    а $\nabla(v_m)$ сходится к $\nabla v_*$ слабо в $L_2(\Omega)^{n^2}$.
+    Напомним, что последовательность $v_m$ сходится к $v_*$ сильно в $L_4(\Omega)^n$
+    и $\nabla(v_m)$ сходится к $\nabla v_*$ слабо в $L_2(\Omega)^{n^2}$.
     Следовательно, мы имеем
     $$\int\limits_{\Omega}\mathcal{E}(v_m) W_\rho(v_m): \nabla\varphi dx \rightarrow
-    \int\limits_{\Omega}\mathcal{E}(v_*) W_\rho(v_*): \nabla\varphi dx, \ m \rightarrow +\infty$$
+    \int\limits_{\Omega}\mathcal{E}(v_*) W_\rho(v_*): \nabla\varphi dx, \ m \rightarrow +\infty.$$
 
     Аналогично получаем
     $$\int\limits_{\Omega}W_\rho(v_m)\mathcal{E}(v_m): \nabla\varphi dx \rightarrow
-    \int\limits_{\Omega}W_\rho(v_*)\mathcal{E}(v_*): \nabla\varphi dx, \ m \rightarrow +\infty$$
+    \int\limits_{\Omega}W_\rho(v_*)\mathcal{E}(v_*): \nabla\varphi dx, \ m \rightarrow +\infty.$$
 
     Таким образом, переходя к пределу в уравнении (\ref{eq:4.1}) при $m \rightarrow +\infty$,
     мы видим, что предельная функция $v_*$ удовлетворяет следующему уравнению:
@@ -458,14 +462,10 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
             \nu\int\limits_{\Omega}\nabla v_*: \nabla\varphi dx -
             \int\limits_{\Omega}\sum_{i,j=1}^n (v_*)_i (v_*)_j \frac{\partial \varphi_j}{\partial x_i} dx
             - \varkappa \int\limits_{\Omega}\sum_{i,j,k=1}^n (v_*)_k \frac{\partial (v_*)_i}{\partial x_j}
-            \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx
-        \end{gathered}
-    \end{equation*}
-    \begin{equation*}
-        \begin{gathered}
+            \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx \\
             - \varkappa \int\limits_{\Omega}\sum_{i,j,k=1}^n (v_*)_k \frac{\partial (v_*)_i}{\partial x_j}
             \frac{\partial^2 \varphi_j}{\partial x_i \partial x_k} dx + \\ + 2 \varkappa
-            \int\limits_{\Omega}\bigg(\mathcal{E}(v_*) W_\rho(v_*) - W_\rho(v_*)\mathcal{E}(v_*)\bigg): \nabla\varphi dx
+            \int\limits_{\Omega}\bigg(\mathcal{E}(v_*) W_\rho(v_*) - W_\rho(v_*)\mathcal{E}(v_*)\bigg): \nabla\varphi dx = \langle f, \varphi \rangle.
         \end{gathered}
     \end{equation*}
     Это доказывает, что $v_* \in V$. Это завершает доказательство теоремы 2.1.
