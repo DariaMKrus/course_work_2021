@@ -11,37 +11,37 @@
     \end{gathered}
 \end{equation}
 
-Для системы (\ref{eq:1.6})"=(\ref{eq:1.7}) рассмотрим краетвую задачу с граничным условием
+Для системы (\ref{eq:1.6})"=(\ref{eq:1.7}) рассмотрим краевую задачу с граничным условием
 \begin{equation}\label{eq:1.8}
      \begin{gathered}
          v\mid_{\partial\Omega}=0.
      \end{gathered}
 \end{equation}
 
-В настоящей работе исследуется существование слабого решения краевой задачи (\ref{eq:1.6})"=(\ref{eq:1.8}), описывающего движение слабых
-водных растворов полимеров, заполняющих ограниченную область $\Omega \in R^n$, $n = 2,3$, которое определяется реологическим
+В настоящей работе исследуется существование слабого решения краевой задачи (\ref{eq:1.6})"=(\ref{eq:1.8}), описывающее движение слабых
+водных растворов полимеров, заполняющих ограниченную область $\Omega \in R^n$, $n = 2,3$, которая определяется реологическим
 соотношением со сглаженной производной Яуманна.
 
-Для исследования используются аппроксимационные и топологические методы
-(см., например, [9], [10]). Краевая задача рассматривается как операторное уравнение. Используемые операторы часто не
-обладают хорошими свойствами  , поэтому рассматривается некоторая аппроксимация этого уравнения. Затем разрешимость
+Для исследования используются аппроксимационные и топологические методы (см., например, [9], [10]). 
+Краевая задача рассматривается, как операторное уравнение. Используемые операторы часто не
+обладают хорошими свойствами, поэтому рассматривается некоторая аппроксимация этого уравнения. Затем разрешимость
 этого аппроксимирующего уравнения исследуется в более сглаженном пространстве. Для этого применяется техника
-топологической степени Лере-Шаудера. Последний шаг - предельный переход  в аппроксимирующем уравнении, поскольку
+топологической степени Лере-Шаудера. Последний шаг --- предельный переход  в аппроксимирующем уравнении, поскольку
 аппроксимирующие параметры стремятся к нулю, а решения аппроксимирующего уравнения сходятся к решению исходного
 уравнения.
 
 
 \section{Слабое условие}
 
-Обозначим через $C_0^{\infty}(\Omega)^n$ пространство функций класса $C^{\infty}$, отображаемых $\Omega$ в $R^n$ с
-компактным носителем в $\Omega$. Также нам потребуется определение следующих функциональных пространств
+Обозначим через $C_0^{\infty}(\Omega)^n$ пространство функций класса $C^{\infty}$, отображаемых из $\Omega$ в $R^n$ с
+компактным носителем в $\Omega$. Также нам потребуется определение следующего функционального пространства
 $$\mathcal{V}=\{v(x)=(v_1,...,v_n)\in C_0^{\infty}(\Omega)^n: div \ v = 0\};$$
 $V$ - замыкание на $\mathcal{V}$ по норме пространсва $W^1_2(\Omega)^n$
 со скалырным произведением
 $$((v,w))=\int\limits_{\Omega}\nabla v : \nabla w dx.$$
-Здесь символ $\nabla v : \nabla w, v=(v_1,...,v_n), w=(w_1,...,w_n)$, обозначает покомпактное метрическое умножение
+Здесь символ $\nabla v : \nabla w, v=(v_1,...,v_n), w=(w_1,...,w_n)$, определяется через покомпактное метрическое умножение
 $$\nabla v : \nabla w = \sum_{i,j=1}^n \frac{\partial v_i}{\partial x_j}\frac{\partial w_i}{\partial x_j} $$
-Пусть $X$ - замыкание $V$ относительно нормы пространства $W_2^3(\Omega)^n$. Рассмотрим пространство $X$ с нормой:
+Пусть $X$ - замыкание по $V$ относительно нормы пространства $W_2^3(\Omega)^n$. Рассмотрим пространство $X$ с нормой:
 $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta v)dx\bigg)^{1/2}.$$
 
 \begin{definition}
@@ -105,7 +105,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 На первом шаге мы получаем априорную оценку равенства (\ref{eq:3.1}) в пространстве $X$
 и с помощью методов топологической степени показываем, что существует решение аппроксимирующей задачи в $X$.
 Также получаем в пространстве $V$ оценку решения аппроксимирующей задачи, которая не зависит от параметра $\varepsilon$.
-Затем простроим последовательность таких решений и покажем, что она допускает подпоследовательность,
+Затем построим последовательность таких решений и покажем, что она имеет подпоследовательность,
 сходящуюся к слабому решению краевой задачи (\ref{eq:1.6})"=(\ref{eq:1.8}) при стремлении параметра приближения $\varepsilon$ к нулю. 
 
 Рассмотрим следующие операторы:
@@ -196,7 +196,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 \end{lemma}
 
 \begin{lemma}\label{lm:3.3}
-    Для опреатора $B_1:L_4(\Omega)^n \rightarrow V^*$ непрерывен и имеет место следующая оценка:
+    Оператор $B_1:L_4(\Omega)^n \rightarrow V^*$ непрерывен и имеет место следующая оценка:
     $$\parallel B_1v\parallel_{V^*}\leqslant C_2\parallel v\parallel^2_{L_4(\Omega)^n}.$$
     Более того, оператор $B_1:X\rightarrow X^*$ вполне непрерывен.
 \end{lemma}
@@ -217,7 +217,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
 \end{lemma}
 
 \begin{proof}
-    Начнем о соценки $\mathcal{E}$ and $W_{\rho}$.
+    Начнем о соценки $\mathcal{E}$ и $W_{\rho}$.
     $$\parallel\mathcal{E}(v)\parallel^2_{L_2(\Omega)}=\sum_{i,j=1}^n \parallel\mathcal{E}_{i,j}(v)\parallel^2_{L_2(\Omega)}
     \leqslant C_5 \sum_{i,j=1}^n\int\limits_{\Omega}\bigg(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\bigg)^2 dx$$
     $$=C_5\sum_{i,j=1}^n\int\limits_{\Omega}\bigg(\frac{\partial v_i}{\partial x_j}\frac{\partial v_i}{\partial x_j}+
@@ -320,7 +320,7 @@ $$\parallel v\parallel_{X}=\bigg(\int\limits_{\Omega}\nabla(\Delta v):\nabla(\De
             +2\lambda\varkappa\int\limits_{\Omega}\bigg(\mathcal{E}(v)W_{\rho}(v)-W_{\rho}(v)\mathcal{E}(v)\bigg):\nabla v dx=\lambda\langle f, v\rangle.
         \end{gathered}
     \end{equation}
-Сведем слогаемыемв левой части уравнения \ref{eq:3.9} следующим образом:
+Запишем слогаемое левой части уравнения \ref{eq:3.9} следующим образом:
 $$\varepsilon\int\limits_{\Omega}\nabla(\Delta v):\nabla(\Delta v)dx=\varepsilon\|v\|^2_X;$$
 $$\int\limits_{\Omega}\sum_{i,j=1}^n v_iv_j\frac{\partial v_j}{\partial x_i}dx=\int\limits_{\Omega}\sum_{i,j=1}^n v_i
 \frac{\partial (v_jv_j)}{\partial x_i}dx=-\int\limits_{\Omega}\sum_{i,j=1}^n\frac{\partial v_i}{\partial x_i}v_jv_jdx=0$$
@@ -340,7 +340,7 @@ $$+\int\limits_{\Omega}\sum_{i,j,k=1}^nv_k\frac{\partial\mathcal{E}_{ij}(v)}{\pa
 \int\limits_{\Omega}\sum_{i,j,k=1}^n v_k\frac{\partial (\mathcal{E}_{ij}(v)\mathcal{E}_{ij}(v))}{\partial x_k}dx$$
 $$=-\int\limits_{\Omega}\sum_{k=1}^n \frac{\partial v_k}{\partial x_k}\sum_{i,j=1}^n\mathcal{E}_{ij}(v)\mathcal{E}_{ij}(v)dx=0.$$
 Здесь указано, что тензор скорости дифформации $\mathcal{E}(u)$ симметричен, а тензоры $W_{\rho}(v)$ и $W(v)$ кососимметричны. 
-Следовательно, уравнения \ref{eq:3.9} переписать в следующем виде:
+Следовательно, уравнение \ref{eq:3.9} можно записать в следующем виде:
 $$\varepsilon\|v\|^2_X+\lambda\nu\|v\|^2_V=\lambda\langle f,v\rangle.$$
 Используя верхнюю оценку правой части последнего уравнения.
 $$\lambda\langle f,v\rangle\leqslant\lambda |\langle f,v\rangle|\leqslant\lambda\|f\|_{V^*}\|v\|_V\leqslant\|f\|_{V^*}\|v\|_V\leqslant
@@ -371,9 +371,9 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
     Напомним, что $\Phi(0,\cdot) = I$ и по свойству нормализации степени $deg_{LS} (I, B_R, 0) = 1$. 
     Следовательно, $deg_{LS} ((1,\cdot), BR.0) = 1$. 
     
-    Таким образом, мы видим, что существует по крайней мере решение $v\in X$ уравнение
+    Таким образом, мы видим, что существует по крайней мере одно решение $v\in X$ уравнения
     $$v-L^{-1}[-K(v)+f]=0$$
-    и следовательно уравнение \ref{eq:3.3}.
+    и следовательно в уравнении \ref{eq:3.3}.
 
     Поскольку существует решение $v\in X$ уравнения \ref{eq:3.3}, из сказанного выше следует, 
     что аппроксимирующая задача имеет хотя бы одно слабое решение $v\in X$.
@@ -407,7 +407,7 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
     $$\lim_{m \rightarrow \infty}\bigg| \varepsilon_m \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx \bigg| =$$
     $$=\lim_{m \rightarrow \infty} \sqrt{\varepsilon_m} \lim_{m \rightarrow \infty}\bigg|\sqrt{\varepsilon_m}
     \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx \bigg|$$
-    так что мы получаем
+    таким образом мы получаем
     $$\varepsilon_m \int\limits_{\Omega} \nabla (\Delta v_m): \nabla (\Delta \varphi) dx \rightarrow 0, \ m \rightarrow +\infty.$$
 
     Для остальных интегралов имеем
@@ -429,7 +429,7 @@ $$\varepsilon\|v\|^2_X+\lambda\frac{\nu\|v\|^2_V}{2}\leqslant\lambda\frac{\|f\|^
             m \rightarrow +\infty;
         \end{gathered}
     \end{equation*}
-    Действительно, здесь последовательность $v_m$ сходится к $v_*$ cильно в $L_4(\Omega)^n$
+    Действительно, последовательность $v_m$ сходится к $v_*$ cильно в $L_4(\Omega)^n$
     и $\nabla(v_m)$ сходится к $\nabla v_*$ слабо в $L_2(\Omega)^{n^2}$.
     Таким образом, результат сходится к произведению пределов. В итоге мы имеем
     \begin{equation*}
